@@ -1,0 +1,54 @@
+Deleting Node 20
+
+1. Initial Call:
+
+*mum_tree.delete(20)".
+
+Current node (self") is "17", Since " 20 > 17", move to the right subtree.
+
+. Call "self.right.delete(20)".
+
+2. First Recursive Call:
+
+. Current node ( self") is " 20". This is the node to be deleted.
+
+3. Find the Minimum in the Right Subtree:
+
+The right subtree of " 20" is:
+Copy code
+
+23
+
+.
+
+The minimum value in this subtree is " 23".
+
+4. Replace "20' with " 23":
+. Set"self.data = 23',
+
+5. Delete the Node with Value "23" in the Right Subtree:
+
+. Call "self.right.delete(23)",
+
+6. Deleting "23' in the Right Subtree:
+
+. Current node (self") is " 23". This is the node to be deleted.
+
+. "23' has one child (34").
+
+7. Returning the Right Child:
+
+. Since " 23" has no left child, return the right child ( 34").
+
+This step ensures that the reference to the node * 23" in its parent node (which was " 20", now " 23"
+after the value replacement) is set to * 34".
+
+8. Updating References:
+
+. At 20 (now "23"), "self.right" is updated to " 34".
+
+9. Returning Up the Call Stack:
+
+. Return the updated " 23" node to the previous call.
+
+. At 17", "self.right" is updated with the retumed value.
